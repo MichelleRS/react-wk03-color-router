@@ -2,6 +2,7 @@ import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Main from './components/Main/Main.js';
 import Nav from './components/Nav/Nav.js';
+import NotFound from './components/NotFound/NotFound.js';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Redirect to="/038/038/038" />
         </Route>
         <Route path="/:r/:g/:b" component={Main} />
-        {/* route to NotFound */}
+        <Route path="*" component={NotFound} />
       </Switch>
     </div>
   );
