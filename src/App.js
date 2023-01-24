@@ -1,12 +1,17 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Main from './components/Main/Main.js';
+import Nav from './components/Nav/Nav.js';
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Switch>
-        <Route path="/" component={Main} />
+        <Route exact path="/">
+          <Redirect to="/038/038/038" />
+        </Route>
+        <Route path="/:r/:g/:b" component={Main} />
         {/* route to NotFound */}
       </Switch>
     </div>
