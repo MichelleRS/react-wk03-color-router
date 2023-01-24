@@ -23,3 +23,7 @@ nav li {
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
 }
+
+li:hover {
+  background-color: ivory;
+}
