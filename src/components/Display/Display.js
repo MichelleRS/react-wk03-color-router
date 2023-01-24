@@ -5,9 +5,11 @@ import './Display.css';
 export default function Display() {
   const { r, g, b } = useParams();
   return (
-    <section style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}>
-      <p>The RGB color values of your color are: {`(${r}, ${g}, ${b})`}</p>
-      <p>Choose another color to see their values.</p>
+    <section className="display" style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}>
+      <div className="display-text">
+        <p>The RGB color values of your color are: {`(${r}, ${g}, ${b})`}</p>
+        <p>Choose another color to see their values.</p>
+      </div>
     </section>
   );
 }
